@@ -24,7 +24,7 @@ listint_t *insert_node(listint_t **head, int number)
 			temp->next = new;
 			return (new);
 		}
-		else if (temp->n < numbeer && temp->next == NULL)
+		else if (temp->n < number && temp->next == NULL)
 		{
 			temp->next = new;
 			return (new);
