@@ -12,7 +12,7 @@ int check_cycle(listint_t *list)
 	temp = list;
 	notMove = list;
 
-	while (temp->next)
+	while (temp)
 	{
 		if (temp->next == NULL)
 			return (0);
