@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def std_tup(tup):
     tup_len = len(tup)
     if tup_len == 0:
@@ -8,6 +9,7 @@ def std_tup(tup):
         return (tup[0], 0)
     else:
         return (tup[0], tup[1])
+
 
 def add_tuple(tuple_a=(), tuple_b=()):
     sum1 = 0
