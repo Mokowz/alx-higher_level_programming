@@ -2,5 +2,5 @@
 
 
 class Square:
-    """ square calas """
+    """An empty class Square."""
     pass
