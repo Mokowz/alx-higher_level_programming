@@ -1,12 +1,7 @@
 #!/usr/bin/python3
+"""Defines a square """
 
 
 class Square:
-    """An empty class Square."""
+    """Empty square"""
     pass
-
-
-if __name__ == '__main__':
-    my_square = Square()
-    print(type(my_square))
-    print(my_square.__dict__)
