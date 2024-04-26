@@ -8,10 +8,11 @@ import sys
 from urllib import request, error
 
 
-url = sys.argv[1]
-req = request.Request(url)
-try:
-    with request.urlopen(req) as response:
-        print(response.read().decode("ascii"))
-except error.HTTPError as e:
-    print("Error code: {}".format(e.code))
+if __name__ == "__main__":
+    url = sys.argv[1]
+    req = request.Request(url)
+    try:
+        with request.urlopen(req) as response:
+            print(response.read().decode("ascii"))
+    except error.HTTPError as e:
+        print("Error code: {}".format(e.code))
