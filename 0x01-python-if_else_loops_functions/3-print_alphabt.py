@@ -2,4 +2,4 @@
 for c in 'abcdefghijklmnopqrstuvwxyz':
     if c == 'q' or c == 'e':
         continue
-    print(f"{c}", end = '')
+    print("{}".format(c), end='')
