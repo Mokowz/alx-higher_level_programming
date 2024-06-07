@@ -1,30 +1,30 @@
 #!/usr/bin/python3
+"""Defines a text-indentation function."""
 
 
 def text_indentation(text):
-    """Prints two new lines after
-    characters: to separate the words
+    """Print text with two new lines after each
+        '.' , '?', ':'
+
     Args:
-        text (str): string text
+        text (string): The text to print.
     Raises:
-        TypeError: if `text` is not string
+        TypeError: If text is not a string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    strin =  ''
-    j = 0
-    while j < len(text):
-        strin += text[j]
-        if text[j] in ['.', '?', ':']:
-            strin = strin.strip()
-            print(strin + '\n')
-            try:
-                if text[j + 1] == ' ':
-                    j += 1
-            except IndexError:
-                pass
-            strin = ''
-        j += 1
 
-    if len(strin) > 0:
-        print(strig, end="")
+    count = 0
+    while count < len(text) and text[count] == ' ':
+        count += 1
+
+    while count < len(text):
+        print(text[count], end="")
+        if text[count] == "\n" or text[count] in ".?:":
+            if text[count] in ".?:":
+                print("\n")
+            count += 1
+            while count < len(text) and text[count] == ' ':
+                count += 1
+            continue
+        count += 1
