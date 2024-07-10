@@ -39,20 +39,20 @@ class Square(Rectangle):
             **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
-            ag = 0
+            a = 0
             for arg in args:
-                if ag == 0:
+                if a == 0:
                     if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
-                elif ag == 1:
+                elif a == 1:
                     self.size = arg
-                elif ag == 2:
+                elif a == 2:
                     self.x = arg
-                elif ag == 3:
+                elif a == 3:
                     self.y = arg
-                ag += 1
+                a += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
@@ -69,7 +69,7 @@ class Square(Rectangle):
                     self.y = v
 
     def to_dictionary(self):
-        """Return the dict of the Square."""
+        """Return the dictionary representation of the Square."""
         return {
             "id": self.id,
             "size": self.width,
@@ -78,6 +78,6 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """Return the print and str of a Square."""
+        """Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)

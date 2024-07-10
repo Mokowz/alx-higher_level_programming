@@ -1,5 +1,7 @@
+###This module needs to be revised
+
 #!/usr/bin/python3
-"""Defines unittests for models/rectangle.py
+"""Defines unittests for models/rectangle.py.
 """
 import io
 import sys

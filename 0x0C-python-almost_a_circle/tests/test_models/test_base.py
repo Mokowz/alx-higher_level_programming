@@ -474,7 +474,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
 
     @classmethod
     def tearDown(self):
-        """Delete created files."""
+        """Delete any created files."""
         try:
             os.remove("Rectangle.csv")
         except IOError:
@@ -533,7 +533,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()
